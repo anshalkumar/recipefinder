@@ -35,5 +35,5 @@ The Recipe Suggestion App allows users to create a dynamic list of ingredients a
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/TUSHAR1651/RecipeIdea
+   git clone https://github.com/{YOURAPIKEY}/RecipeIdea
    cd RecipeIdea
