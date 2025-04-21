@@ -6,7 +6,7 @@ Modal.setAppElement('#root');
 
 
 const Search = () => {
-    // State variables
+
     const {availableItems , addItem , removeItem}= useContext(AvailableItemsContext);
     const [input, setInput] = useState("");
     const [recipes, setRecipes] = useState([]);
@@ -16,7 +16,6 @@ const Search = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
 
-    // Function to get the recipes for the selected ingredient
     const getRecipes = async () => {
         if (!input.trim()) {
             setError("Please enter an ingredient");
@@ -43,7 +42,7 @@ const Search = () => {
     };
 
 
-    // Function to handle the click event on a recipe
+  
     const handleMealClick = async (mealId) => {
         try {
             const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`);

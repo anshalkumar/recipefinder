@@ -3,12 +3,12 @@ import { AvailableItemsContext } from './AvailableItemsContext';
 
 
 const AvailableItems = () => {
-  //  State variables
+
   const { availableItems, addItem, removeItem } = useContext(AvailableItemsContext);
   const [item, setItem] = useState('');
   const [error, setError] = useState('');
 
-  //  When Add Item is clicked 
+  
   const handleAddItem = () => {
     if (!item.trim()) {
       setError('Please enter an item');
@@ -19,14 +19,14 @@ const AvailableItems = () => {
     setError('');
   };
 
-  // When Remove Item is clicked
+
   const handleRemoveItem = (item) => {
-    // console.log(item);
+
     removeItem(item);
   };
 
  
-  // If the user enters the key "Enter", the handleAddItem function will be called
+
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       handleAddItem();
